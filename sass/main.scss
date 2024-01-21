@@ -151,7 +151,7 @@ background-color: $dark;
     text-transform: uppercase;
     cursor: pointer;
     &::before {
-      background-color: $darker-dark;
+      background-color: $light-dark;
     }
   }
 }
@@ -178,7 +178,8 @@ background-color: $dark;
 .hero-img {
     position: relative;
     padding: 10em 2em;
-    @include heroImages("../img/polynesia-3021072_640.jpg");
+    @include heroImages("../img/construction-2578410_640.jpg");
+    background-position: left;
     text-align: center;
     color: $dark;
     overflow: hidden;
@@ -191,9 +192,120 @@ background-color: $dark;
       padding: 1em 0;
     }
     hr {
-        border: 2px solid $light-dark;
+        border: 2px solid $dark;
     }
   }
+//services 
+.services {
+  &__card {
+    position: relative;
+    margin: 1em 0;
+    height: 600px;
+    color: $dark;
+    text-align: center;
+    perspective: 1000px;
+
+    &:hover {
+      .services__card-img {
+        transform: rotateY(-180deg);
+        opacity: 0;
+      }
+      .services__card-info {
+        transform: rotateY(0);
+        opacity: 1;
+      }
+    }
+    &-img {
+      padding: 2em;
+      height: 100%;
+      border-radius: 8px;
+      background-size: cover;
+      transition: transform 1s, opacity 1s;
+      &--first {
+        background-image: $light-orange-gradient,
+          url("../img/electrician-1080573_640.jpg");
+      }
+      &--second {
+        background-image: $orange-gradient,
+          url("../img/people-2569404_640.jpg");
+      }
+      &--third {
+        background-image: $second-orange-gradient, url("../img/scaffolding-3679310_640.jpg");
+      }
+      &-title {
+        font-family: 'Bebas Neue', sans-serif;
+        letter-spacing: 3px;
+        font-size: 2.8rem;
+      }
+      &-info {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        font-size: 1.8rem;
+
+        i {
+          margin-right: 0.3em;
+        }
+      }
+    }
+    &-info {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-image: $orange-gradient-solid;
+      border-radius: 8px;
+      opacity: 0;
+      transform: rotateY(180deg);
+      transition: transform 1s, opacity 1s;
+      &-title {
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 1.2em;
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 2.8rem;
+        letter-spacing: 3px;
+      }
+      &-list {
+        margin: 0 auto;
+        width: 70%;
+        list-style: none;
+        &-item {
+          padding: 1em;
+          font-size: 1.4rem;
+          border-bottom: 1px solid $dark;
+        }
+        &item:last-child {
+          border-bottom: none;
+        }
+      }
+      &-btn {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2em;
+        padding: 1em;
+        border-radius: 8px;
+        width: 80%;
+        border: none;
+        background-color: $beige;
+        color: $dark;
+        cursor: pointer;
+
+        &::before {
+          background-color: $beige-hover;
+        }
+      }
+    }
+  }
+}
+
 
 //Media
 @media (min-width: 576px) {
@@ -252,6 +364,17 @@ background-color: $dark;
           font-size: 2.2rem;
         }
       }
+      .services {
+        &__cards {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+        &__card {
+          margin: 1em;
+          width: 45%;
+        }
+      }
 }
 @media (min-width: 992px) {
     .burger-btn {
@@ -298,4 +421,11 @@ background-color: $dark;
           max-width: 900px;
         }
       }
+}
+@media (min-width: 1100px) {
+  .services {
+    &__card {
+      width: 30%;
+    }
+  }
 }

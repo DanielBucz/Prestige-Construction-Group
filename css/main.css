@@ -233,7 +233,7 @@ body {
   cursor: pointer;
 }
 .header__btn::before {
-  background-color: #1B1B1B;
+  background-color: #464545;
 }
 
 .why-us__box {
@@ -255,10 +255,11 @@ body {
 .hero-img {
   position: relative;
   padding: 10em 2em;
-  background-image: linear-gradient(45deg, rgba(240, 101, 67, 0.6), rgba(255, 190, 61, 0.6)), url("../img/polynesia-3021072_640.jpg");
+  background-image: linear-gradient(45deg, rgba(240, 101, 67, 0.6), rgba(255, 190, 61, 0.6)), url("../img/construction-2578410_640.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  background-position: left;
   text-align: center;
   color: #1B1B1B;
   overflow: hidden;
@@ -272,7 +273,108 @@ body {
   padding: 1em 0;
 }
 .hero-img hr {
-  border: 2px solid #464545;
+  border: 2px solid #1B1B1B;
+}
+
+.services__card {
+  position: relative;
+  margin: 1em 0;
+  height: 600px;
+  color: #1B1B1B;
+  text-align: center;
+  perspective: 1000px;
+}
+.services__card:hover .services__card-img {
+  transform: rotateY(-180deg);
+  opacity: 0;
+}
+.services__card:hover .services__card-info {
+  transform: rotateY(0);
+  opacity: 1;
+}
+.services__card-img {
+  padding: 2em;
+  height: 100%;
+  border-radius: 8px;
+  background-size: cover;
+  transition: transform 1s, opacity 1s;
+}
+.services__card-img--first {
+  background-image: linear-gradient(45deg, rgba(255, 137, 108, 0.6), rgba(253, 198, 89, 0.6)), url("../img/electrician-1080573_640.jpg");
+}
+.services__card-img--second {
+  background-image: linear-gradient(45deg, rgba(240, 101, 67, 0.6), rgba(255, 190, 61, 0.6)), url("../img/people-2569404_640.jpg");
+}
+.services__card-img--third {
+  background-image: linear-gradient(45deg, rgba(245, 71, 3, 0.6), rgba(255, 117, 24, 0.6)), url("../img/scaffolding-3679310_640.jpg");
+}
+.services__card-img-title {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+  font-size: 2.8rem;
+}
+.services__card-img-info {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  font-size: 1.8rem;
+}
+.services__card-img-info i {
+  margin-right: 0.3em;
+}
+.services__card-info {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(45deg, rgb(240, 101, 67), rgb(255, 190, 61));
+  border-radius: 8px;
+  opacity: 0;
+  transform: rotateY(180deg);
+  transition: transform 1s, opacity 1s;
+}
+.services__card-info-title {
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1.2em;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.8rem;
+  letter-spacing: 3px;
+}
+.services__card-info-list {
+  margin: 0 auto;
+  width: 70%;
+  list-style: none;
+}
+.services__card-info-list-item {
+  padding: 1em;
+  font-size: 1.4rem;
+  border-bottom: 1px solid #1B1B1B;
+}
+.services__card-info-listitem:last-child {
+  border-bottom: none;
+}
+.services__card-info-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2em;
+  padding: 1em;
+  border-radius: 8px;
+  width: 80%;
+  border: none;
+  background-color: #d5bf86;
+  color: #1B1B1B;
+  cursor: pointer;
+}
+.services__card-info-btn::before {
+  background-color: #8d775f;
 }
 
 @media (min-width: 576px) {
@@ -324,6 +426,15 @@ body {
   .hero-img__text {
     font-size: 2.2rem;
   }
+  .services__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .services__card {
+    margin: 1em;
+    width: 45%;
+  }
 }
 @media (min-width: 992px) {
   .burger-btn {
@@ -364,5 +475,10 @@ body {
   .hero-img hr {
     width: 60%;
     max-width: 900px;
+  }
+}
+@media (min-width: 1100px) {
+  .services__card {
+    width: 30%;
   }
 }/*# sourceMappingURL=main.css.map */
