@@ -1,0 +1,14 @@
+@mixin burgerBtn {
+  position: absolute;
+  right: 0;
+  height: 5px;
+  content: "";
+  background-color: $dark;
+  transition: width 0.3s;
+}
+@mixin heroImages($bgImg) {
+  background-image: $orange-gradient, url($bgImg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}

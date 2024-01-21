@@ -1,0 +1,301 @@
+@import "./colors";
+@import "./mixins";
+@import "./components";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.6rem;
+  background-color: $light-dark;
+}
+
+
+.burger-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  background: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  z-index: 1000;
+
+  &:focus {
+    outline: none;
+    border: 1px solid rgba(37, 37, 37, 0.907);
+    border-radius: 8px;
+  }
+  &:hover {
+    .burger-btn__bars::after,
+    .burger-btn__bars::before {
+      width: 100%;
+    }
+  }
+  &__box {
+    position: relative;
+    width: 40px;
+    height: 30px;
+  }
+  &__bars,
+  &__bars::after,
+  &__bars::before {
+    @include burgerBtn;
+  }
+  &__bars {
+    width: 100%;
+    &::after {
+      top: 13px;
+      width: 60%;
+    }
+    &::before {
+      top: 27px;
+      width: 30%;
+      transition-delay: 0.1s;
+    }
+  }
+}
+.black-bars-color, .black-bars-color::after, .black-bars-color::before {
+background-color: $dark;
+}
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+  background-image: $orange-gradient-solid;
+  z-index: 100;
+  &--active {
+    transform: translateX(0);
+  }
+  &__item {
+    position: relative;
+    display: block;
+    color: $dark;
+    margin: 0.5em 0;
+    padding: 0.5em 2em;
+    font-size: 2.8rem;
+    text-decoration: none;
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      transform: scaleY(0);
+      transition: transform 0.3s;
+      background-color: $dark;
+      content: "";
+    }
+    &:hover::before {
+      transform: scaleY(1);
+    }
+  }
+}
+@keyframes navItemsAnimations {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.nav-items-animation {
+  animation: navItemsAnimations 1s both;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  height: 75vh;
+  text-align: center;
+  color: $dark;
+  @include heroImages("../img/header-small.jpg");
+  background-attachment: scroll;
+
+  &__heading {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 4.8rem;
+    font-weight: 300;
+  }
+  &__text {
+    font-size: 1.4rem;
+  }
+  &__btn {
+    margin-top: 2em;
+    padding: 0.8em 1.6em;
+    font-size: 1.4rem;
+    background: $dark;
+    border: none;
+    border-radius: 8px;
+    color: $light-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    &::before {
+      background-color: $darker-dark;
+    }
+  }
+}
+
+//WHY US?
+.why-us {
+    &__box {
+      display: flex;
+      flex-direction: column;
+      margin: 2em 0;
+    }
+    &__img {
+      width: 100%;
+      margin-bottom: 1em;
+    }
+    &__title {
+      margin-bottom: 0.5em;
+    }
+    &__text {
+      font-size: 1.4rem;
+    }
+  }
+//Hero Section
+.hero-img {
+    position: relative;
+    padding: 10em 2em;
+    @include heroImages("../img/polynesia-3021072_640.jpg");
+    text-align: center;
+    color: $dark;
+    overflow: hidden;
+    &__title {
+    font-family: 'Bebas Neue', sans-serif;
+      margin-bottom: 0.5em;
+      font-size: 4.8rem;
+    }
+    &__text {
+      padding: 1em 0;
+    }
+    hr {
+        border: 2px solid $light-dark;
+    }
+  }
+
+//Media
+@media (min-width: 576px) {
+    .why-us {
+      &__box {
+        flex-direction: row;
+        justify-content: space-between;
+        &-text {
+          width: 55%;
+          &--right {
+            text-align: right;
+          }
+        }
+        &-img {
+          width: 40%;
+          &--right {
+            order: 1;
+          }
+        }
+      }
+      &__img {
+        margin-bottom: 0;
+        max-height: 300px;
+      }
+    }
+}
+@media (min-width: 768px) {
+    .white-block {
+      height: 50px;
+      width: 45%;
+    }
+    .header {
+      &__heading {
+        font-size: 6.6rem;
+      }
+      &__text {
+        font-size: 2.2rem;
+      }
+      &__btn {
+        font-size: 1.6rem;
+      }
+    }
+    .why-us {
+        &__text {
+          font-size: 1.8rem;
+        }
+      }
+      .hero-img {
+        padding: 30rem 2em;
+    
+        hr {
+          margin: 0 auto;
+          width: 70%;
+        }
+        &__text {
+          font-size: 2.2rem;
+        }
+      }
+}
+@media (min-width: 992px) {
+    .burger-btn {
+      top: 50px;
+      right: 50px;
+    }
+    .header {
+      background-image: $orange-gradient, url("../img/header-big.jpg");
+      &__heading {
+        font-size: 10rem;
+      }
+    }
+    .nav {
+      &__item {
+        font-size: 4.8rem;
+      }
+    }
+    .why-us {
+        &__box {
+          margin: 5em 0;
+          &-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-bottom: 2.5em;
+          }
+        }
+        &__title {
+          font-size: 3.6rem;
+        }
+        &__text {
+          font-size: 2.2rem;
+        }
+      }
+      .hero-img {
+        padding: 40rem 2em;
+        background-image: $orange-gradient, url('../img/construction-2578410_1920.jpg');
+    
+        &__title {
+          font-size: 7.2rem;
+        }
+        hr {
+          width: 60%;
+          max-width: 900px;
+        }
+      }
+}
