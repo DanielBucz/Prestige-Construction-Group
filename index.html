@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prestige Construction Group</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap" rel="stylesheet">
@@ -11,6 +13,7 @@
     <script src="https://kit.fontawesome.com/f33ec96b69.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
     <button class="burger-btn">
         <div class="burger-btn__box">
@@ -19,10 +22,10 @@
     </button>
     <nav class="nav">
         <div class="nav__items">
-            <a href="#" class="nav__item"></a>
-            <a href="#" class="nav__item"></a>
-            <a href="#" class="nav__item"></a>
-            <a href="#" class="nav__item"></a>
+            <a href="#services" class="nav__item">Usługi</a>
+            <a href="#equipment" class="nav__item">Nasze maszyny</a>
+            <a href="#reviews" class="nav__item">Opinie</a>
+            <a href="#contact" class="nav__item">Kontakt</a>
         </div>
     </nav>
     <header class="header section">
@@ -83,9 +86,13 @@
                         <div class="services__card-info">
                             <h3 class="services__card-info-title">Eksperci - Budowlani</h3>
                             <ul class="services__card-info-list">
-                                <li class="services__card-info-list-item">Realizacja inwestycji budowlanych od podstaw, włączając w to budowę nowych obiektów mieszkalnych, komercyjnych i przemysłowych.</li>
-                                <li class="services__card-info-list-item">Przeprowadzanie remontów, modernizacji i renowacji istniejących budynków.</li>
-                                <li class="services__card-info-list-item">Kompleksowe wykonawstwo, obejmujące budowę fundamentów, konstrukcji, a także instalacji elektrycznych i hydraulicznych.</li>
+                                <li class="services__card-info-list-item">Realizacja inwestycji budowlanych od podstaw,
+                                    włączając w to budowę nowych obiektów mieszkalnych, komercyjnych i przemysłowych.
+                                </li>
+                                <li class="services__card-info-list-item">Przeprowadzanie remontów, modernizacji i
+                                    renowacji istniejących budynków.</li>
+                                <li class="services__card-info-list-item">Kompleksowe wykonawstwo, obejmujące budowę
+                                    fundamentów, konstrukcji, a także instalacji elektrycznych i hydraulicznych.</li>
                             </ul>
                             <button class="services__card-info-btn btn-special-animation">Wybierz</button>
                         </div>
@@ -100,10 +107,15 @@
                         <div class="services__card-info">
                             <h3 class="services__card-info-title">Projektowanie PLUS</h3>
                             <ul class="services__card-info-list">
-                                <li class="services__card-info-list-item">Opracowywanie kompleksowych projektów inżynieryjnych obejmujących zarówno aspekty architektoniczne, jak i konstrukcyjne.</li>
-                                <li class="services__card-info-list-item">Dopasowywanie projektów do indywidualnych potrzeb klienta i lokalnych regulacji budowlanych.</li>
-                                <li class="services__card-info-list-item">Stała analiza kosztów w celu zoptymalizowania budżetu inwestycji.</li>
-                                <li class="services__card-info-list-item">Poszukiwanie efektywnych rozwiązań, które nie narażają na utratę jakości wykonania.</li>
+                                <li class="services__card-info-list-item">Opracowywanie kompleksowych projektów
+                                    inżynieryjnych obejmujących zarówno aspekty architektoniczne, jak i konstrukcyjne.
+                                </li>
+                                <li class="services__card-info-list-item">Dopasowywanie projektów do indywidualnych
+                                    potrzeb klienta i lokalnych regulacji budowlanych.</li>
+                                <li class="services__card-info-list-item">Stała analiza kosztów w celu zoptymalizowania
+                                    budżetu inwestycji.</li>
+                                <li class="services__card-info-list-item">Poszukiwanie efektywnych rozwiązań, które nie
+                                    narażają na utratę jakości wykonania.</li>
                             </ul>
                             <button class="services__card-info-btn btn-special-animation">Wybierz</button>
                         </div>
@@ -118,10 +130,14 @@
                         <div class="services__card-info">
                             <h3 class="services__card-info-title">Usługi Konstrukcyjne Premium</h3>
                             <ul class="services__card-info-list">
-                                <li class="services__card-info-list-item">Gwarancja wykonania konstrukcji z najwyższą starannością i zgodnie z najnowszymi standardami branżowymi.</li>
-                                <li class="services__card-info-list-item">Zastosowanie wysokiej jakości materiałów budowlanych.</li>
-                                <li class="services__card-info-list-item">Dopasowanie oferty do unikalnych potrzeb każdego klienta.</li>
-                                <li class="services__card-info-list-item">Konsultacje i wsparcie w procesie projektowania w celu osiągnięcia optymalnych rozwiązań.</li>
+                                <li class="services__card-info-list-item">Gwarancja wykonania konstrukcji z najwyższą
+                                    starannością i zgodnie z najnowszymi standardami branżowymi.</li>
+                                <li class="services__card-info-list-item">Zastosowanie wysokiej jakości materiałów
+                                    budowlanych.</li>
+                                <li class="services__card-info-list-item">Dopasowanie oferty do unikalnych potrzeb
+                                    każdego klienta.</li>
+                                <li class="services__card-info-list-item">Konsultacje i wsparcie w procesie
+                                    projektowania w celu osiągnięcia optymalnych rozwiązań.</li>
                             </ul>
                             <button class="services__card-info-btn btn-special-animation">Wybierz</button>
                         </div>
@@ -129,8 +145,168 @@
                 </div>
             </div>
         </section>
-    </main>
+        <section class="equipment section section-padding" id="equipment">
+            <div class="white-block white-block-right"></div>
+            <div class="white-block white-block-left"></div>
+            <h2 class="section-heading">Nasze maszyny</h2>
+            <div class="wrapper">
+                <div class="equipment__box">
+                    <div class="equipment__option">
+                        <img src="./img/construction-site-3688252_640.jpg" alt="Koparka CAT"
+                            class="equipment__option-img">
+                        <div class="equipment__option-info">
+                            <h3 class="equipment__option-heading">Koparka CAT</h3>
+                            <p class="equipment__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Vero
+                                at, aliquam consequatur sequi velit deleniti voluptatum culpa dolores aliquid ullam.</p>
+                            <p class="equipment__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <button class="equipment__option-btn btn-special-animation">Dowiedz się więcej!</button>
+                        </div>
+                    </div>
+                    <div class="equipment__option">
+                        <img src="./img/cement-mixer-1438074_640.jpg" alt="Betoniarka MAN"
+                            class="equipment__option-img equipment__option-img--right">
+                        <div class="equipment__option-info">
+                            <h3 class="equipment__option-heading">Betoniarka MAN</h3>
+                            <p class="equipment__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Vero
+                                at, aliquam consequatur sequi velit deleniti voluptatum culpa dolores aliquid ullam.</p>
+                            <p class="equipment__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <button class="equipment__option-btn btn-special-animation">Dowiedz się więcej!</button>
+                        </div>
+                    </div>
+                    <div class="equipment__option">
+                        <img src="./img/road-roller-6564386_640.jpg" alt="Walec H20" class="equipment__option-img">
+                        <div class="equipment__option-info">
+                            <h3 class="equipment__option-heading">Walec H20</h3>
+                            <p class="equipment__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Vero
+                                at, aliquam consequatur sequi velit deleniti voluptatum culpa dolores aliquid ullam.</p>
+                            <p class="equipment__option-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            </p>
+                            <button class="equipment__option-btn btn-special-animation">Dowiedz się więcej!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="reviews section section-padding white-section" id="reviews">
+            <h2 class="section-heading">Opinie</h2>
+            <div class="wrapper">
+                <div class="reviews__boxes">
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/attractive-1869761_640.jpg" alt="Anna Nowak">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores totam blanditiis
+                                tempore quisquam dignissimos repudiandae quae deleniti dolor minus veniam.
+                            </p>
+                            <strong>Anna Nowak</strong>
+                        </div>
+                    </div>
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/woman-1919143_640.jpg" alt="Barbara Kowalska">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores totam blanditiis
+                                tempore quisquam dignissimos repudiandae quae deleniti dolor minus veniam.
+                            </p>
+                            <strong>Barbara Kowalska</strong>
+                        </div>
+                    </div>
+                    <div class="reviews__box">
+                        <div class="reviews__box-img">
+                            <img src="./img/happy-1836445_640.jpg" alt="Łukasz Duda">
+                        </div>
+                        <div class="reviews__box-info">
+                            <div class="reviews__box-quote">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                            <p class="reviews__box-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores totam blanditiis
+                                tempore quisquam dignissimos repudiandae quae deleniti dolor minus veniam.
+                            </p>
+                            <strong>Łukasz Duda</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact section-padding white-section section" id="contact">
+            <div class="white-block white-block-right"></div>
+            <div class="white-block white-block-left"></div>
+            <h2 class="section-heading">Kontakt</h2>
+            <div class="wrapper">
+                <form action="" class="contact__form">
+                    <div class="contact__form-top">
+                        <label for="name" class="contact__form-label">Imię i nazwisko:</label>
+                        <input type="text" class="contact__form-input" id="name">
 
+                        <label for="email" class="contact__form-label">Adres e-mail:</label>
+                        <input type="text" class="contact__form-input" id="email">
+                    </div>
+                    <label for="msg" class="contact__form-label">Wiadomość:</label>
+                    <textarea id="msg" class="contact__form-textarea"></textarea>
+
+                    <button type="submit" class="contact__form-btn btn-special-animation">Wyślij</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__boxes">
+                <div class="footer__box">
+                    <h3 class="footer__box-title"><i class="fa-solid fa-truck-front"></i> PCG Sp. z o.o.</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, iste sit dolorem iure
+                        provident fugiat odio quos quo sunt nemo?</p>
+                    <div class="footer__box-social">
+                        <a href="#" class="footer__box-link"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#" class="footer__box-link"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#" class="footer__box-link"><i class="fab fa-instagram-square"></i></a>
+                    </div>
+                </div>
+                <div class="footer__box footer__box-desktop">
+                    <h3 class="footer__box-title">Usługi</h3>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a href="#">Eksperci - Budowlani</a></li>
+                        <li class="footer__box-list-item"><a href="#">Projektowanie Plus</a></li>
+                        <li class="footer__box-list-item"><a href="#">Usługi konstrukcyjne Premium</a></li>
+                        <li class="footer__box-list-item"><a href="#">Pozostałe usługi</a></li>
+                    </ul>
+                </div>
+                <div class="footer__box footer__box-desktop">
+                    <h3 class="footer__box-title">O firmie</h3>
+                    <ul class="footer__box-list">
+                        <li class="footer__box-list-item"><a href="#">O nas</a></li>
+                        <li class="footer__box-list-item"><a href="#">Zarząd</a></li>
+                        <li class="footer__box-list-item"><a href="#">Kariera</a></li>
+                        <li class="footer__box-list-item"><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <p class="footer__bottom-text">&copy; <span class="footer__year"></span> Prestige Construction Group</p>
+    </footer>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./js/slick.js"></script>
     <script src="./js/main.js"></script>
 </body>
+
 </html>

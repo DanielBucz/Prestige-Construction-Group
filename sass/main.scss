@@ -19,7 +19,6 @@ body {
   background-color: $light-dark;
 }
 
-
 .burger-btn {
   position: fixed;
   top: 20px;
@@ -64,8 +63,10 @@ body {
     }
   }
 }
-.black-bars-color, .black-bars-color::after, .black-bars-color::before {
-background-color: $dark;
+.orange-bars-color,
+.orange-bars-color::after,
+.orange-bars-color::before {
+  background-color: $main-color;
 }
 .nav {
   position: fixed;
@@ -132,7 +133,7 @@ background-color: $dark;
   background-attachment: scroll;
 
   &__heading {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 4.8rem;
     font-weight: 300;
   }
@@ -158,44 +159,45 @@ background-color: $dark;
 
 //WHY US?
 .why-us {
-    &__box {
-      display: flex;
-      flex-direction: column;
-      margin: 2em 0;
-    }
-    &__img {
-      width: 100%;
-      margin-bottom: 1em;
-    }
-    &__title {
-      margin-bottom: 0.5em;
-    }
-    &__text {
-      font-size: 1.4rem;
-    }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0;
+    color: $pure-white;
   }
+  &__img {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  &__title {
+    margin-bottom: 0.5em;
+  }
+  &__text {
+    font-size: 1.4rem;
+  }
+}
 //Hero Section
 .hero-img {
-    position: relative;
-    padding: 10em 2em;
-    @include heroImages("../img/construction-2578410_640.jpg");
-    background-position: left;
-    text-align: center;
-    color: $dark;
-    overflow: hidden;
-    &__title {
-    font-family: 'Bebas Neue', sans-serif;
-      margin-bottom: 0.5em;
-      font-size: 4.8rem;
-    }
-    &__text {
-      padding: 1em 0;
-    }
-    hr {
-        border: 2px solid $dark;
-    }
+  position: relative;
+  padding: 10em 2em;
+  @include heroImages("../img/construction-2578410_640.jpg");
+  background-position: left;
+  text-align: center;
+  color: $dark;
+  overflow: hidden;
+  &__title {
+    font-family: "Bebas Neue", sans-serif;
+    margin-bottom: 0.5em;
+    font-size: 4.8rem;
   }
-//services 
+  &__text {
+    padding: 1em 0;
+  }
+  hr {
+    border: 2px solid $dark;
+  }
+}
+//services
 .services {
   &__card {
     position: relative;
@@ -226,14 +228,14 @@ background-color: $dark;
           url("../img/electrician-1080573_640.jpg");
       }
       &--second {
-        background-image: $orange-gradient,
-          url("../img/people-2569404_640.jpg");
+        background-image: $orange-gradient, url("../img/people-2569404_640.jpg");
       }
       &--third {
-        background-image: $second-orange-gradient, url("../img/scaffolding-3679310_640.jpg");
+        background-image: $second-orange-gradient,
+          url("../img/scaffolding-3679310_640.jpg");
       }
       &-title {
-        font-family: 'Bebas Neue', sans-serif;
+        font-family: "Bebas Neue", sans-serif;
         letter-spacing: 3px;
         font-size: 2.8rem;
       }
@@ -268,7 +270,7 @@ background-color: $dark;
         left: 50%;
         transform: translateX(-50%);
         top: 1.2em;
-        font-family: 'Bebas Neue', sans-serif;
+        font-family: "Bebas Neue", sans-serif;
         font-size: 2.8rem;
         letter-spacing: 3px;
       }
@@ -305,127 +307,368 @@ background-color: $dark;
     }
   }
 }
+.equipment {
+  position: relative;
 
+  @include heroImages("../img/oil-rig-514035_640.jpg");
+  overflow: hidden;
+  .section-heading {
+    color: $dark;
+  }
+  &__option {
+    margin: 1em 0;
+    box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.18);
+    background-color: $light-dark;
+    overflow: hidden;
 
+    &-img {
+      width: 100%;
+      transition: transform 0.3s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    &-info {
+      padding: 2em;
+      background-color: $light-dark;
+      color: $light-white;
+      z-index: 10;
+    }
+    &-heading {
+      margin-bottom: 0.5em;
+      font-size: 2.4rem;
+      font-weight: 300;
+    }
+    &-text {
+      margin-bottom: 0.5em;
+      font-size: 1.3rem;
+      color: $light-white;
+    }
+    &-btn {
+      margin-top: 1em;
+      padding: 0.8em;
+      width: 100%;
+      color: $dark;
+      font-weight: bold;
+      background-color: $main-color;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      &::before {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+
+//contact
+.contact {
+  position: relative;
+  background-color: $light-white;
+  overflow: hidden;
+  .white-block-left {
+    background-color: $light-dark;
+  }
+  &__form,
+  &__form-top {
+    display: flex;
+    flex-direction: column;
+    &-label {
+      margin-bottom: 0.5em;
+      text-transform: uppercase;
+    }
+    &-input {
+      @include contactForm;
+    }
+    &-textarea {
+      @include contactForm;
+      width: 100%;
+      max-width: 100%;
+      min-height: 150px;
+    }
+    &-btn {
+      align-self: flex-end;
+      padding: 1em;
+      width: 100%;
+      max-width: 300px;
+      color: $pure-white;
+      border: none;
+      border-radius: 8px;
+      background-color: $main-color;
+      cursor: pointer;
+      &::before {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}
+.footer {
+  color: $pure-white;
+  background-color: $light-dark;
+
+  .wrapper {
+    padding: 6em 2em 2em;
+  }
+  &__box {
+    font-size: 1.4rem;
+    &-title {
+      margin-bottom: 1em;
+      font-size: 3rem;
+      text-transform: uppercase;
+    }
+    &-social {
+      margin: 2em 0 1em;
+    }
+    &-link {
+      padding: 0.3em;
+      color: $pure-white;
+      font-size: 3.6rem;
+      text-decoration: none;
+      transition: color 0.3s;
+      &:first-child {
+        padding-left: 0;
+      }
+      &:hover {
+        color: $light-white;
+      }
+    }
+  }
+  &__box-desktop {
+    display: none;
+  }
+  &__bottom-text {
+    padding: 2em;
+    text-align: center;
+  }
+}
 //Media
 @media (min-width: 576px) {
-    .why-us {
-      &__box {
-        flex-direction: row;
-        justify-content: space-between;
-        &-text {
-          width: 55%;
-          &--right {
-            text-align: right;
-          }
-        }
-        &-img {
-          width: 40%;
-          &--right {
-            order: 1;
-          }
+  .why-us {
+    &__box {
+      flex-direction: row;
+      justify-content: space-between;
+      &-text {
+        width: 55%;
+        &--right {
+          text-align: right;
         }
       }
-      &__img {
-        margin-bottom: 0;
-        max-height: 300px;
+      &-img {
+        width: 40%;
+        &--right {
+          order: 1;
+        }
       }
     }
+    &__img {
+      margin-bottom: 0;
+      max-height: 300px;
+    }
+  }
+  .equipment {
+    &__option {
+      display: flex;
+      margin: 2em 0;
+      width: 100%;
+      &-img {
+        width: 50%;
+        height: auto;
+        &--right {
+          order: 1;
+        }
+      }
+      &-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      &-heading {
+        margin-bottom: 0.5em;
+        font-size: 3.6rem;
+      }
+      &-btn {
+        padding: 1em;
+      }
+    }
+  }
 }
 @media (min-width: 768px) {
-    .white-block {
-      height: 50px;
+  .white-block {
+    height: 50px;
+    width: 45%;
+  }
+  .header {
+    &__heading {
+      font-size: 6.6rem;
+    }
+    &__text {
+      font-size: 2.2rem;
+    }
+    &__btn {
+      font-size: 1.6rem;
+    }
+  }
+  .why-us {
+    &__text {
+      font-size: 1.8rem;
+    }
+  }
+  .hero-img {
+    padding: 30rem 2em;
+
+    hr {
+      margin: 0 auto;
+      width: 70%;
+    }
+    &__text {
+      font-size: 2.2rem;
+    }
+  }
+  .services {
+    &__cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &__card {
+      margin: 1em;
       width: 45%;
     }
-    .header {
-      &__heading {
-        font-size: 6.6rem;
-      }
-      &__text {
-        font-size: 2.2rem;
-      }
-      &__btn {
-        font-size: 1.6rem;
-      }
+  }
+  .footer {
+    &__boxes {
+      display: flex;
+      justify-content: space-between;
     }
-    .why-us {
-        &__text {
-          font-size: 1.8rem;
-        }
+    &__box {
+      margin: 0 2em;
+      width: 25%;
+      &:first-child {
+        width: 50%;
       }
-      .hero-img {
-        padding: 30rem 2em;
-    
-        hr {
-          margin: 0 auto;
-          width: 70%;
-        }
-        &__text {
-          font-size: 2.2rem;
-        }
+      &-title {
+        font-size: 2.4rem;
       }
-      .services {
-        &__cards {
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-        }
-        &__card {
-          margin: 1em;
-          width: 45%;
-        }
-      }
-}
-@media (min-width: 992px) {
-    .burger-btn {
-      top: 50px;
-      right: 50px;
-    }
-    .header {
-      background-image: $orange-gradient, url("../img/header-big.jpg");
-      &__heading {
-        font-size: 10rem;
-      }
-    }
-    .nav {
-      &__item {
-        font-size: 4.8rem;
-      }
-    }
-    .why-us {
-        &__box {
-          margin: 5em 0;
-          &-text {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            margin-bottom: 2.5em;
+      &-list {
+        list-style: none;
+        &-item {
+          margin-bottom: 1em;
+          a {
+            color: $light-white;
+            text-decoration: none;
           }
         }
-        &__title {
-          font-size: 3.6rem;
-        }
-        &__text {
-          font-size: 2.2rem;
-        }
       }
-      .hero-img {
-        padding: 40rem 2em;
-        background-image: $orange-gradient, url('../img/construction-2578410_1920.jpg');
-    
-        &__title {
-          font-size: 7.2rem;
-        }
-        hr {
-          width: 60%;
-          max-width: 900px;
-        }
+    }
+    &__box-desktop {
+      display: block;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .burger-btn {
+    top: 50px;
+    right: 50px;
+  }
+  .header {
+    background-image: $orange-gradient, url("../img/header-big.jpg");
+    &__heading {
+      font-size: 10rem;
+    }
+  }
+  .nav {
+    &__item {
+      font-size: 4.8rem;
+    }
+  }
+  .why-us {
+    &__box {
+      margin: 5em 0;
+      &-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        margin-bottom: 2.5em;
       }
+    }
+    &__title {
+      font-size: 3.6rem;
+    }
+    &__text {
+      font-size: 2.2rem;
+    }
+  }
+  .hero-img {
+    padding: 40rem 2em;
+    background-image: $orange-gradient,
+      url("../img/construction-2578410_1920.jpg");
+
+    &__title {
+      font-size: 7.2rem;
+    }
+    hr {
+      width: 60%;
+      max-width: 900px;
+    }
+  }
+  .offers {
+    background-image: $orange-gradient, url("../img/oil-rig-514035_1920.jpg");
+    &__option {
+      &-img {
+        object-fit: cover;
+        height: 300px;
+      }
+      &-text {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 @media (min-width: 1100px) {
   .services {
     &__card {
       width: 30%;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .reviews.section-padding {
+    padding: 6em 0;
+  }
+}
+.reviews {
+  &__box {
+    position: relative;
+    margin: 2em;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px #2e2e2e2e;
+    background-color: $main-color;
+    transition: transform 0.3s;
+    &:hover {
+      transform: scale(0.95);
+    }
+    &-img {
+      position: absolute;
+      top: 8px;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    &-quote {
+      margin-bottom: 1em;
+      font-size: 3rem;
+      color: $dark;
+    }
+    &-text {
+      margin-bottom: 1em;
+      font-size: 1.4rem;
+      color: $dark;
     }
   }
 }
